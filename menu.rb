@@ -8,7 +8,8 @@ COMMANDS = {
   run: Run,
   test: Test,
   show: Show,
-  authors: Authors
+  authors: Authors,
+  alltests: AllTests
 }
 
 
