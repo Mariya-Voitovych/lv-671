@@ -1,7 +1,8 @@
-require_relative 'menu_functions.rb'
+require_relative 'menu_functions'
+
 include MenuFunctions
 
-COMMANDS = { 
+COMMANDS = {
   help: Help,
   tasks: Tasks,
   tests: Tests,
@@ -10,27 +11,24 @@ COMMANDS = {
   show: Show,
   authors: Authors,
   alltests: AllTests
-}
-
+}.freeze
 
 puts "This console menu-program allows you to run tasks, tests and get additional information.
 There are 7 commands available: #{COMMANDS.keys.join(', ')}.
 For more info run command: help.\n\n"
 
-while true
+loop do
+  print 'Enter your command: '
+  input = gets.chomp.split(' ')
 
-  print "Enter your command: "
-  input = gets.chomp.split(" ")
-  
   if input.count < 1
-    puts "You didn't enter any command!" 
+    puts "You didn't enter any command!"
     next
   end
-  
+
   if COMMANDS[input[0].to_sym]
     COMMANDS[input[0].to_sym].call(input)
   else
     puts "You entered invalid command. Enter 'help' to view available commands!"
   end
-
 end
