@@ -1,25 +1,24 @@
 puts "This program calculates total amount of books for each category included in category list.
 Category is the first letter of book code.\n\n"
 
-def stockList(listOfArt, listOfCat)
-  a = listOfCat.first
-  return "" if listOfArt.empty? or listOfCat.empty?
-  listOfCat.each do |category| 
-      z = 0
-      listOfArt.each do |code|
-          z += code.split(" ")[-1].to_i if code.start_with? category
-      end
-      (category <<  " : #{z})").prepend("(")
+def stocklist(list_of_art, list_of_cat)
+  return '' if list_of_art.empty? || list_of_cat.empty?
+
+  list_of_cat.each do |category| 
+    z = 0
+    list_of_art.each do |code|
+      z += code.split(' ')[-1].to_i if code.start_with? category
+    end
+    (category << " : #{z})").prepend('(')
   end
-  res = listOfCat.join(" - ")
+  res = list_of_cat.join(' - ')
   categories = []
-  listOfCat.each {|x| categories << x[1]}
-  puts "For stocklist: #{listOfArt}\nand categories: #{categories},\nwe have such result: #{res}." 
+  list_of_cat.each { |x| categories << x[1] }
+  puts "For stocklist: #{list_of_art}\nand categories: #{categories},\nwe have such result: #{res}."
   res
 end
 
+b = ['ABAR 200', 'CDXE 500', 'BKWR 250', 'BTSQ 890', 'DRTY 600']
+c = %w[A B]
 
-b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
-c = ["A", "B"]
-
-stockList(b, c)
+stocklist(b, c)
