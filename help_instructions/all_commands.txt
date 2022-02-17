@@ -1,0 +1,8 @@
+Available commands:
+help
+tasks
+tests
+test
+show
+run
+authors

@@ -1,19 +1,21 @@
 class Point
   attr_accessor :x, :y
+
   def initialize(x, y)
     @x = x
-    @y = y 
+    @y = y
   end
 end
 
 class Circle
   attr_accessor :center, :radius
-  def initialize(center, radius) 
-    @center = center 
+
+  def initialize(center, radius)
+    @center = center
     @radius = radius
   end
 end
 
 def circle_area(circle)
-  Math::PI*circle.radius**2
+  Math::PI * circle.radius**2
 end
