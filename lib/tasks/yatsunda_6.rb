@@ -9,5 +9,5 @@ def expanded_form(num)
    a.map.with_index { |x, i| x * 10**i }.reverse().find_all{ |k| k!=0 }.join(' + ')
 end
 
-expanded_form(42)
-expanded_form(70304)
+p expanded_form(42)
+p expanded_form(70304)
