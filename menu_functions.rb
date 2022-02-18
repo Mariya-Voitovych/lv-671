@@ -1,3 +1,4 @@
+require_relative './show'
 module MenuFunctions
 
   class Help
@@ -30,11 +31,11 @@ module MenuFunctions
     end
   end
 
-  class Show
-    def self.call(input)
+  # class Show
+  #   def self.call(input)
 
-    end
-  end
+  #   end
+  # end
 
   class Authors
     def self.call(input)
