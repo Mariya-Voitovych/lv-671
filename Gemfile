@@ -15,5 +15,6 @@ end
 
 group :development, :test do
   gem 'require_all', '~> 3.0'
-  gem "prime"
+  gem 'prime'
+  gem 'colorize'
 end

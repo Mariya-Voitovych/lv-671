@@ -1,9 +1,8 @@
-
 module MenuFunctions
 
 
   class Show
-    require 'colorize' #gem install colorize
+    require 'colorize'
     DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬".green.freeze
     def self.call
       available_directories
