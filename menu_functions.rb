@@ -1,7 +1,7 @@
 module MenuFunctions
   class Help
     def self.call(input = 'all_commands')
-      f = File.open("./help_instructions/#{command_name}.txt")
+      f = File.open("./help_instructions/#{input}.txt")
       while line = f.gets do
         puts line
       end
