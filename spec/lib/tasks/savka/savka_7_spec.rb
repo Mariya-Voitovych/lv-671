@@ -1,5 +1,4 @@
 require 'rspec'
-require '/home/mariya/Documents/SoftServe/tests_for_katas/7Recursive Replication'
 
 describe 'replicate' do
   context 'when given positive integer parametr' do

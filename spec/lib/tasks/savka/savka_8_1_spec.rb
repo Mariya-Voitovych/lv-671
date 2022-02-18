@@ -1,5 +1,4 @@
 require 'rspec'
-require '/home/mariya/Documents/SoftServe/tests_for_katas/8To square(root) or not to square(root)'
 
 describe 'square_or_square_root' do
   it 'get root and square' do

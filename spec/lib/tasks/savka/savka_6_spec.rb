@@ -1,5 +1,4 @@
 require 'rspec'
-require '/home/mariya/Documents/SoftServe/tests_for_katas/6Build a pile of Cubes'
 
 describe 'find_nb' do
   context 'when pile from cubes not exists' do

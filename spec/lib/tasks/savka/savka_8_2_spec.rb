@@ -1,5 +1,4 @@
 require 'rspec'
-require '/home/mariya/Documents/SoftServe/tests_for_katas/8My head is at the wrong end'
 
 describe 'fix_the_meerkat' do
   it 'switch first and last arrays elements' do
