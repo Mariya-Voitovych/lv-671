@@ -26,8 +26,13 @@ loop do
     next
   end
 
+  if input[0] == 'exit'
+    puts 'exiting...'
+    break
+  end
+
   if COMMANDS[input[0].to_sym]
-    COMMANDS[input[0].to_sym].call(input)
+    COMMANDS[input[0].to_sym].call #(input)
   else
     puts "You entered invalid command. Enter 'help' to view available commands!"
   end
