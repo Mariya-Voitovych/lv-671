@@ -1,5 +1,13 @@
 require_relative './show'
+require_relative './alltests'
+
+$LOAD_PATH << '.'
+require 'shared.rb'
+
 module MenuFunctions
+
+include Shared
+
   class Help
     class << self
       def call(input)
@@ -65,16 +73,10 @@ module MenuFunctions
       
     end
   end
-  class AllTests
-    def self.call(input)
-      p available_dirs = Dir.entries(PATH_TESTS).drop(2)
-      # username = available_dirs.map{ |string| string.split("_")[0] }.uniq[0]
-      # p username
-      # puts "Choose author`s name"
-      # input = gets.chomp.downcase
-      # allusersfiles = available_dirs.find_all{ |k| k.start_with?(username) }.map{|string| PATH_TESTS + "\\" + "#{string}"}
-      # p allusersfiles
-      # system('rspec', allusersfiles.join(" "))
-    end
-  end
+  # class AllTests
+  #   def self.call()
+      
+  #     
+  #   end
+  # end
 end
