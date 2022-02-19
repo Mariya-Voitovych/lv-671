@@ -1,3 +1,4 @@
+require './files_to_test/wilson_primes'
 require 'bigdecimal'
 
 describe '.Wilson_primes' do

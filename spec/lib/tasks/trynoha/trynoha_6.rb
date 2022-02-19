@@ -1,3 +1,5 @@
+require './files_to_test/help_the_bookseller'
+
 describe 'calculate number of books' do
   it 'return a summ of books category A and B' do
     b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
