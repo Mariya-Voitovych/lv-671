@@ -1,13 +1,8 @@
-def perimeter(n)
-  a, b, sum = 0, 1, 4;
-  return a if n == 0
-  for i in (2..n+1)
-    c = a + b
-    a, b = b, c
-    sum += 4 * b
+require './files_to_test/perimetr_in_square_in_a_rectangle'
+
+describe 'summ of perimetrs' do
+  it 'summ of squares' do
+    expect(perimeter(5)).to eql(80)
+    expect(perimeter(7)).to eql(216)
   end
-  sum
 end
-
-
-puts perimeter(7)

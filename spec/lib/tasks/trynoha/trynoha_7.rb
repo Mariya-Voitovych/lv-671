@@ -1,7 +1,10 @@
+require './files_to_test/new_argument'
 
-def new_avg(arr, newavg)
-  return newavg if arr.empty?
-  donation = newavg * (arr.size + 1) - arr.reduce {|sum, x| sum + x}
-  raise "Error" if donation < 0
-  donation.ceil
+describe 'return donation' do
+  it 'return newavg if arr.empty' do
+    expect(new_avg([], 2)).to eql(2)
+  end
+  it 'return newavg if arr.empty' do
+    expect(new_avg([0,0], 2)).to eql(6)
+  end
 end

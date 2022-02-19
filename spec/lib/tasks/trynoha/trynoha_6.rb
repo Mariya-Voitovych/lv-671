@@ -1,20 +1,15 @@
-def stockList(listOfArt, listOfCat)
-  return "" if listOfArt.empty? or listOfCat.empty?
-  listOfCat.each do |category|
-    z = 0
-    listOfArt.each do |code|
-      z += code.split(" ")[-1].to_i if code.start_with? category
-    end
-    (category <<  " : #{z})").prepend("(")
+require './files_to_test/help_the_bookseller'
+
+describe 'calculate number of books' do
+  it 'return a summ of books category A and B' do
+    b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
+    c = ["A", "B"]
+  expect(stockList(b, c)).to eql("(A : 200) - (B : 1140)")
   end
-  listOfCat.join(" - ")
+
+  it 'return result 0 if is not any book category W' do
+    b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
+    c = ["W"]
+    expect(stockList(b,c)).to eql("(W : 0)")
+  end
 end
-
-b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
-c = ["W"]
-
-puts stockList(b, c).inspect
-
-
-
-# https://www.codewars.com/kata/help-the-bookseller
