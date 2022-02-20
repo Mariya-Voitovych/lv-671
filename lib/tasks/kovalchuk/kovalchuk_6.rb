@@ -1,4 +1,4 @@
-puts "This program calculate the average and variance of rainfall for the city.\n\n" 
+puts "This program calculate the average and variance of rainfall for the city.\n\n"
 
 def value_of_month(town, strng)
   month_values = []
