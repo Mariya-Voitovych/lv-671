@@ -1,3 +1,4 @@
+
 RSpec.describe 'litres' do
   subject { litres(time) }
   context 'when argument is correct' do

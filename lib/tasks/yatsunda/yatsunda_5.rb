@@ -7,6 +7,6 @@ def increment_string(input)
         : (input +'1')
 end
 
-increment_string("foo")
-increment_string("foobar001")
-increment_string("foobar99")
+p increment_string("foo")
+p increment_string("foobar001")
+p increment_string("foobar99")

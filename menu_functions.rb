@@ -1,5 +1,12 @@
 require_relative './show'
+require_relative './user_tests'
+
+$LOAD_PATH << '.'
+require 'shared.rb'
+
 module MenuFunctions
+
+include Shared
 
   class Help
     class << self
@@ -9,7 +16,7 @@ module MenuFunctions
           find_command
         rescue
           puts "Please check the commands name."
-        end  
+        end
       end
 
       private
@@ -18,7 +25,7 @@ module MenuFunctions
         File.readlines("./help_instructions/all_commands.txt").each do |line|
           puts line
         end
-      end  
+      end
 
       def find_command
         user_input = gets.chomp.downcase
@@ -27,25 +34,31 @@ module MenuFunctions
             puts line
           end
         end
-      end 
-    end 
+      end
+    end
   end
 
   class Tasks
-    def self.call(input)
-
+    def self.call
+      tasks_list = Dir.glob("./lib/tasks/**/*.rb").drop(2)
+      tasks_list.each do |task_name| task_name.gsub(/\w+\.\w+$/) {|task| puts task.green}
+      end
     end
   end
 
   class Tests
-    def self.call(input)
-
+    def self.call
+      puts "-----------------------------------------"
+      Dir.glob("#{Dir.pwd}/spec/lib/tasks/**/*.rb") do |i|
+        puts i.split('/').last.split('.').first
+      end
+      puts "-----------------------------------------"
     end
   end
 
   class Run
     def self.call(input)
-
+      
     end
   end
 
@@ -74,4 +87,10 @@ module MenuFunctions
       puts "-----------------------------------------"
     end
   end
+  # class AllTests
+  #   def self.call()
+      
+  #     
+  #   end
+  # end
 end

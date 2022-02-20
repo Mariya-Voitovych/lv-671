@@ -15,4 +15,4 @@ def billboard(name, price=30)
     s
 end
 
-billboard('Roxa',6)
+p billboard('Roxa',6)

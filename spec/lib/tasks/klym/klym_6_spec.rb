@@ -1,3 +1,4 @@
+
 RSpec.describe 'f' do
   subject { f(x) }
   context 'when all argument is correct' do
