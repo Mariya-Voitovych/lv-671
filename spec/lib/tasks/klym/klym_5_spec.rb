@@ -1,49 +1,43 @@
-describe '#page_count' do
-  it "return the number of pages" do
-    helper = PaginationHelper.new(['a','b','c','d','e','f'], 4)
-    expect(helper.page_count).to eq 2  
-  end   
-end
-
-describe "#item_count" do
-  it "return the number of items within the entire collection" do
-    helper = PaginationHelper.new(['a','b','c','d','e','f'], 4)
-    expect(helper.item_count).to eq 6
-  end
-end
-
-describe '#page_item_count(page_index)' do
-  context 'passed valid page_index' do
-    it "returns the number of items on the current page" do
-      helper = PaginationHelper.new(['a','b','c','d','e','f'], 4)
-      index = 1
-      expect(helper.page_item_count(index)).to eq 2 
+RSpec.describe PaginationHelper do
+  subject { described_class.new(collection, items_per_page) }
+  let(:collection) { %w[a b c d e f g h i] }
+  let(:items_per_page) { 3 }
+  describe '#page_count' do
+    it 'should return correct result' do
+      expect(subject.page_count).to eq(3)
     end
   end
-
-  context 'passed page_index that is out of range' do
-    it "returns '-1'" do
-      helper = PaginationHelper.new(['a','b','c','d','e','f'], 4)
-      index = 10
-      expect(helper.page_item_count(index)).to be -1
+  describe '#item_count' do
+    it 'should return correct result' do
+      expect(subject.item_count).to eq(9)
     end
   end
-end
-
-describe '#page_index(item_index)' do
-  context 'passed valid item_index' do
-    it "determines what page an item is on" do 
-      helper = PaginationHelper.new(['a','b','c','d','e','f'], 4)
-      index = 2
-      expect(helper.page_index(index)).to eq 0
+  describe '#page_index' do
+    context 'when item_index greather than collection.length' do
+      let(:item_index) { 10 }
+      it 'should return -1' do
+        expect(subject.page_index(item_index)).to eq(-1)
+      end
+    end
+    context 'when item_index is in range of collection' do
+      let(:item_index) { 5 }
+      it 'should return correct result' do
+        expect(subject.page_index(item_index)).to eq(1)
+      end
     end
   end
-
-  context 'passed item_index that is out of range' do
-    it "returns '-1' for item_index values that are out of range" do 
-      helper = PaginationHelper.new(['a','b','c','d','e','f'], 4)
-      index = 20
-      expect(helper.page_index(index)).to be -1
+  describe '#page_item_count' do
+    context 'when page_index is in range of collection' do
+      let(:page_index) { 2 }
+      it 'should return correct result' do
+        expect(subject.page_item_count(page_index)).to eq(3)
+      end
+    end
+    context 'when page_index greather than collection.length' do
+      let(:page_index) { 10 }
+      it 'should return -1' do
+        expect(subject.page_item_count(page_index)).to eq(-1)
+      end
     end
   end
 end
