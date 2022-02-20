@@ -3,6 +3,7 @@ module MenuFunctions
   class Show
     require 'colorize'
     DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬".green.freeze
+
     def self.call
       available_directories
       get_author_name

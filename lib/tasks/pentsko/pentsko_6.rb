@@ -1,3 +1,6 @@
+puts "This function change initial string by substracting from basic ballance spending.
+After every spending it add remnant data to end of string.\n\n"
+
 def balance(input_data)
   drop_symbols = "Original_Balance: "+ input_data.gsub(/(:|=|!|^\s)/, "")
   spendings = drop_symbols.split.map { |el| /\d+\.\d+/.match(el) }
@@ -31,5 +34,3 @@ puts balance("1000.00!=
 128 Book :14.32
 129 Gasoline ::16.10
 ")
-
-#https://www.codewars.com/kata/59d727d40e8c9dd2dd00009f/train/ruby

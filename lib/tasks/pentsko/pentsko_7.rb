@@ -1,3 +1,5 @@
+puts "This function calculate a sum of squares of element in some line of Pascal triangle.\n\n"
+
 def easyline_calc(n)
   if n == 0
     return [1]

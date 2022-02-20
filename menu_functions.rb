@@ -9,7 +9,7 @@ module MenuFunctions
           find_command
         rescue
           puts "Please check the commands name."
-        end  
+        end
       end
 
       private
@@ -18,7 +18,7 @@ module MenuFunctions
         File.readlines("./help_instructions/all_commands.txt").each do |line|
           puts line
         end
-      end  
+      end
 
       def find_command
         user_input = gets.chomp.downcase
@@ -27,13 +27,15 @@ module MenuFunctions
             puts line
           end
         end
-      end 
-    end 
+      end
+    end
   end
 
   class Tasks
-    def self.call(input)
-
+    def self.call
+      tasks_list = Dir.glob("./lib/tasks/**/*.rb").drop(2)
+      tasks_list.each do |task_name| task_name.gsub(/\w+\.\w+$/) {|task| puts task.green}
+      end
     end
   end
 
@@ -63,7 +65,7 @@ module MenuFunctions
 
   class Authors
     def self.call(input)
-      
+
     end
   end
 end
