@@ -10,7 +10,7 @@ COMMANDS = {
   test: Test,
   show: Show,
   authors: Authors,
-  alltests: AllTests
+  user_tests: UserTests
 }.freeze
 
 puts "This console menu-program allows you to run tasks, tests and get additional information.

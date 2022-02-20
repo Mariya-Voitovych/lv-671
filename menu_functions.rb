@@ -1,5 +1,5 @@
 require_relative './show'
-require_relative './alltests'
+require_relative './user_tests'
 
 $LOAD_PATH << '.'
 require 'shared.rb'
