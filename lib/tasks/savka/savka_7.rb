@@ -10,4 +10,4 @@ def replicate(times, number)
   end
 end
 
-replicate(5, 3)
+p replicate(5, 3)

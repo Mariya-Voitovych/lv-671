@@ -6,5 +6,5 @@ def get_middle(s)
     x%2 > 0 ? s[y] : s[y-1] + s[y]
 end
 
-getMiddle("testing")
-getMiddle("middle")
+p get_middle("testing")
+p get_middle("middle")

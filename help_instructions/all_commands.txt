@@ -1,0 +1,8 @@
+Enter the commands name you want to look up:
+authors 
+tasks 
+test 
+tests 
+run 
+show 
+Or enter a blank line to exit.

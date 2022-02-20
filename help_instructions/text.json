@@ -1,0 +1,7 @@
+{
+  "choose_author": "Choose an author: ",
+  "run_author_tests": "For running tests",
+  "run_author_task": "Choose the kata number",
+  "run": "run",
+  "show": "show"
+}
