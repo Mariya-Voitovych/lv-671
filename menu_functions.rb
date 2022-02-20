@@ -40,8 +40,12 @@ module MenuFunctions
   end
 
   class Tests
-    def self.call(input)
-
+    def self.call
+      puts "-----------------------------------------"
+      Dir.glob("#{Dir.pwd}/spec/lib/tasks/**/*.rb") do |i|
+        puts i.split('/').last.split('.').first
+      end
+      puts "-----------------------------------------"
     end
   end
 
