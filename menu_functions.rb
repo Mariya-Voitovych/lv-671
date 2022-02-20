@@ -63,7 +63,15 @@ module MenuFunctions
 
   class Authors
     def self.call(input)
-      
+      surnames = []
+      puts "-----------------------------------------"
+      Dir.foreach("#{Dir.pwd}/lib/tasks") do |i|
+        if i.length > 2
+          surnames << i.capitalize
+        end  
+      end
+      surnames.sort.each { |item|  puts item }
+      puts "-----------------------------------------"
     end
   end
 end

@@ -1,3 +1,6 @@
+puts "This program return an array, where the first element is the count of positives numbers
+and the second element is sum of negative numbers \n\n"
+
 def count_positives_sum_negatives(arr)
   return [] if [[], nil].include?(arr)
 

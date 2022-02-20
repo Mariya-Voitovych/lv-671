@@ -1,3 +1,5 @@
+puts "This program calculate the average and variance of rainfall for the city.\n\n" 
+
 def value_of_month(town, strng)
   month_values = []
   data_new = strng.split("\n").each_with_object({}) do |str, hsh|
