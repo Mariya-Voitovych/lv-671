@@ -1,5 +1,12 @@
 require_relative './show'
+require_relative './user_tests'
+
+$LOAD_PATH << '.'
+require 'shared.rb'
+
 module MenuFunctions
+
+include Shared
 
   class Help
     class << self
@@ -51,7 +58,7 @@ module MenuFunctions
 
   class Run
     def self.call(input)
-
+      
     end
   end
 
@@ -72,4 +79,10 @@ module MenuFunctions
 
     end
   end
+  # class AllTests
+  #   def self.call()
+      
+  #     
+  #   end
+  # end
 end
