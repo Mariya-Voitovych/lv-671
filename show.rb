@@ -1,9 +1,8 @@
 module MenuFunctions
-
-
   class Show
     require 'colorize'
     DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬".green.freeze
+
     def self.call
       available_directories
       get_author_name
@@ -12,7 +11,7 @@ module MenuFunctions
     private
 
     def self.available_directories
-      available_dirs = Dir.entries('./katas').drop(2)
+      available_dirs = Dir.entries('./lib/tasks').drop(2)
       available_dirs.each {|dir_name| puts dir_name.green}
     end
 
@@ -23,7 +22,7 @@ module MenuFunctions
     end
 
     def self.getting_files(user_input)
-      total = Dir.entries("./katas/#{user_input}").drop(2)
+      total = Dir.entries("./lib/tasks/#{user_input}").drop(3)
       total.map!.with_index {|file, index| [(index + 1), file]}
       total.each {|i, x| puts "#{i})".green + " " + "#{x}"}
       getting_file_name(total, user_input)
@@ -36,7 +35,7 @@ module MenuFunctions
     end
 
     def self.opening_file(total, user_input, num_input)
-      file = File.open("./katas/#{user_input}/#{total.assoc(num_input).at(1)}")
+      file = File.open("./lib/tasks/#{user_input}/#{total.assoc(num_input).at(1)}")
       show(file)
     end
 
