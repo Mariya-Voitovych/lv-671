@@ -6,21 +6,26 @@ module Shared
 PATH_TASKS = './lib/tasks'
 PATH_TESTS = './spec/lib/tasks'
 PATH_JSON = './help_instructions/text.json'
+#=========================================================
 
 #============== SHOW METHODS ==============================
+      
+
+    #=================TEXT ======================
     #shared method for geting static text from json file
     def self.show_text
         file = File.read(PATH_JSON)
         JSON.parse(file)
     end
-  
+    #object from text.json
+    TEXT = Shared.show_text
 
-#=================TEXT VAR ======================
-TEXT = Shared.show_text
-# ================================================
-def text_format(key)
-    puts (TEXT[key]).green
-end
+    #greem text, from text.json object, method gets text key
+    def text_format(key)
+        puts (TEXT[key]).green
+    end
+    # ================================================
+
 
 
     def dir_entr(url)
