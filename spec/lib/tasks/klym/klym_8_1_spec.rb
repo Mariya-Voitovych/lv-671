@@ -1,12 +1,16 @@
-describe "#litres(time)" do
-  context 'when passed integer value equal 5' do
-    it "returns litres of water per hour" do
-      expect(litres(5)).to eq (5*0.5).floor
+
+RSpec.describe 'starting_mark' do
+  subject { starting_mark(height) }
+  context 'when argument is in the right range ' do
+    let(:height) { 1.52 }
+    it 'should return correct value' do
+      expect(subject).to eq(9.45)
     end
   end
-  
-  it "returns rounded value(integer)" do
-    cycling_time = 5 #in hours
-    expect(litres(cycling_time)).to be_an_instance_of Integer
+  context 'call method with nil' do
+    let(:height) { nil }
+    it 'should raise TypeError' do
+      expect { subject }.to raise_error(TypeError)
+    end
   end
 end

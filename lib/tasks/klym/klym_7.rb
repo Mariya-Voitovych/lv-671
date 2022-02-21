@@ -1,4 +1,4 @@
-puts "This program return sum of number sequence. If start number bigger than the last one method should return 0"
+puts "This program returns sum of number sequence. If start number bigger than the last one method should return 0"
 
 def sequence_sum(begin_number, end_number, step)
   return 0 if begin_number > end_number

@@ -1,4 +1,4 @@
-puts "This program return better approximation of f(x) in the neighborhood of 0"
+puts "This program returns better approximation of f(x) in the neighborhood of 0"
 
 def f(x)
   x.fdiv(1 + Math.sqrt(1 + x))

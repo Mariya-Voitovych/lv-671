@@ -1,19 +1,28 @@
-describe "#sequence_sum(begin_number, end_number, step)" do
-  context 'begin_number bigger than end_number' do
-    it "should return 0" do
-      begin_num = 5
-      end_num = 3
-      step = 1
-      expect(sequence_sum(begin_num, end_num, step)).to eq (0)
+
+RSpec.describe 'sequence_sum' do
+  subject { sequence_sum(begin_number, end_number, step) }
+  context 'when all argument is correct' do
+    let(:begin_number) { 1 }
+    let(:end_number) { 5 }
+    let(:step) { 3 }
+    it 'should return correct result' do
+      expect(subject).to eq(5)
     end
   end
-
-  context 'when passed valid input' do  
-    it "returns the sum of sequence of integers" do
-      begin_num = 1
-      end_num = 8
-      step = 2
-      expect(sequence_sum(begin_num, end_num, step)).to eq (16)
+  context 'when begin_number is greater than end_number' do
+    let(:begin_number) { 15 }
+    let(:end_number) { 7 }
+    let(:step) { 4 }
+    it 'should return zero' do
+      expect(subject).to eq(0)
+    end
+  end
+  context 'when one of arguments is string' do
+    let(:begin_number) { 'string' }
+    let(:end_number) { 25 }
+    let(:step) { 2 }
+    it 'should raise ArgumentError' do
+      expect { subject }.to raise_error(ArgumentError)
     end
   end
 end

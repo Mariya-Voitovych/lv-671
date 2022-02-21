@@ -30,7 +30,7 @@ RSpec.describe "nba cup" do
 
   context "not given team" do
     it "returns empty string" do
-      expect(nba_cup(res, "")).to eq "2131"
+      expect(nba_cup(res, "")).to eq ""
     end
   end
 end
