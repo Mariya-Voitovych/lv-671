@@ -54,11 +54,13 @@ module MenuFunctions
     def self.show(file)
       puts DIVIDER
       file.readlines.each do |line|
-        if line.count("#") >= 2
-          point = line.rindex("#")
-          puts line.split("").take_while.with_index {|char, index| index != point}.join
+        split = line.split("")
+        if split.none? {|el| el == "\""}
+          puts split.take_while {|char| char != "#"}.join
+        elsif split[split.rindex("#") + 1] != "{"
+          puts split.take_while.with_index {|x, i| i != split.rindex("#")}.join
         else
-          puts line.split("").take_while {|char| char != "#"}.join
+          puts line
         end
       end
       puts DIVIDER
