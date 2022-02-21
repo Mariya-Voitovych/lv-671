@@ -5,7 +5,8 @@ module MenuFunctions
             text_format('choose_author')
             showin_files_names(PATH_TESTS)
             autor = get_input_string('run_author_tests')
-            system('rspec', dir_entr("#{PATH_TESTS}/#{autor}").join(" "))
+            list = dir_entr("#{PATH_TESTS}/#{autor}").join(" ")
+            system('rspec', list)
         end
 
     end
