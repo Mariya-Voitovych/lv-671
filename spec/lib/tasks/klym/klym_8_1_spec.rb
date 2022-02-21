@@ -1,3 +1,4 @@
+
 RSpec.describe 'starting_mark' do
   subject { starting_mark(height) }
   context 'when argument is in the right range ' do
