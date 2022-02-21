@@ -66,6 +66,8 @@ include Shared
       katas_list.each{ |index, lastname| puts "#{index}: #{lastname}" }
       author_kata = get_input_number("run_author_task")
       system('ruby', "#{PATH_TASKS}/#{author}/#{katas_list.assoc(author_kata).at(1)}")
+      rescue Errno::ENOENT
+        puts 'You entered invalid last name'.red
     end
   end
 
