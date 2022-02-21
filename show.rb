@@ -12,7 +12,7 @@ module MenuFunctions
     private
 
     def self.available_directories
-      available_dirs = Dir.entries('./lib/tasks/').drop(2)
+      available_dirs = Dir.entries('./lib/tasks/').delete_if {|dir| [".", ".."].include?(dir)}
       available_dirs.each {|dir_name| puts dir_name.green}
     end
 
@@ -23,7 +23,7 @@ module MenuFunctions
     end
 
     def self.getting_files(user_input)
-      total = Dir.entries("./lib/tasks/#{user_input}").drop(2)
+      total = Dir.entries("./lib/tasks/#{user_input}").delete_if {|dir| [".", ".."].include?(dir)}
       total.map!.with_index {|file, index| [(index + 1), file]}
       total.each {|i, x| puts "#{i})".green + " " + "#{x}"}
       getting_file_name(total, user_input)
