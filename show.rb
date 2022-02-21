@@ -57,7 +57,7 @@ module MenuFunctions
         split = line.split("")
         if split.none? {|el| el == "\""}
           puts split.take_while {|char| char != "#"}.join
-        elsif split[split.rindex("#") + 1] != "{"
+        elsif split.include?("#") && split[split.rindex("#") + 1] != "{"
           puts split.take_while.with_index {|x, i| i != split.rindex("#")}.join
         else
           puts line
