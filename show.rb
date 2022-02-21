@@ -17,7 +17,7 @@ module MenuFunctions
     end
 
     def self.get_author_name
-      puts "Choose author`s name"
+      puts "Choose author by entering corresponding last name"
       user_input = gets.chomp.downcase
       getting_files(user_input)
     end
