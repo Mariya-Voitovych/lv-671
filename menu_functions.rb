@@ -75,44 +75,8 @@ include Shared
   # end
 
   class Authors
-    def self.call(input)
-      show_authors
-    end
-    @surnames = []
-    def self.show_authors
-      # @surnames = []
-      puts "-----------------------------------------"
-      Dir.foreach("#{Dir.pwd}/lib/tasks") do |i|
-        if i.length > 2
-          @surnames << i
-        end  
-      end
-      @surnames.sort.each { |item|  puts item.capitalize }
-      puts "-----------------------------------------"
-      user_input
-    end
-    
-    def self.user_input
-      puts "Please, enter author name"
-      user_input = gets.chomp.downcase
-      if @surnames.include?(user_input)
-        count_tasks(user_input)
-      else
-        puts "Authors name is incorrect.\nPlease, enter correct value from the list"
-      end
-    end
-    def self.count_tasks(author)
-      katas_foolder = Dir.glob("#{Dir.pwd}/lib/tasks/#{author}/*.rb")
-      tests_foolder = Dir.glob("#{Dir.pwd}/spec/lib/tasks/#{author}/*.rb")
-      if katas_foolder.empty? && tests_foolder.empty?
-        puts "#{author} havent any tasks or spec_tests yet"
-      else
-        puts "#{author} have #{katas_foolder.length} katas and #{tests_foolder.length} spec_tests"
-      end  
-
-      # kata_value = Dir.glob("#{Dir.pwd}/lib/tasks/#{author}/*.rb").length
-      # spec_value = Dir.glob("#{Dir.pwd}/spec/lib/tasks/#{author}/*.rb").length
-      # puts Dir.glob("#{Dir.pwd}/spec/lib/tasks/#{author}/*.rb").empty?
+    def self.call
+      get_list("#{PATH_TASKS}/*") { |item| item.capitalize}   
     end
   end
   # class AllTests

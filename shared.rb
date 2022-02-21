@@ -63,6 +63,19 @@ PATH_JSON = './help_instructions/text.json'
         #catch user input
         gets.chomp.to_i
     end
+
+    # return list of files in path
+    def get_list(path)
+      puts "-----------------------------------------"
+      Dir.glob(path).each do |item|
+        if block_given?
+          puts yield item.split('/').last
+        else
+          puts item.split('/').last
+        end
+      end
+      puts "-----------------------------------------"
+    end
 #============== opening ==============================
     def opening_file(url)
         File.open(url)
