@@ -30,7 +30,7 @@ module MenuFunctions
     end
 
     def self.getting_file_name(total, user_input)
-      puts "Choose file to open by entering corresponding numbers"
+      puts "Choose file to open by entering corresponding number"
       num_input = gets.chomp.to_i
       opening_file(total, user_input, num_input)
     end
