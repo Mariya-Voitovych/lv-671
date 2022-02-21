@@ -42,7 +42,7 @@ module MenuFunctions
 
     def self.show(file)
       puts DIVIDER
-      file.readlines.each {|x| puts x}
+      file.readlines.each {|x| puts x unless x.start_with?("#")}
       puts DIVIDER
     end
   end
