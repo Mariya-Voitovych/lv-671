@@ -7,7 +7,8 @@ PATH_TASKS = './lib/tasks'
 PATH_TESTS = './spec/lib/tasks'
 PATH_JSON = './help_instructions/text.json'
 #=========================================================
-
+AUTHORS = ["klym", "kovalchuk", "losiev", "pentsko", "savka", "trynoha",
+"voitovych", "yatsunda", "zastavskyi"]
 #============== SHOW METHODS ==============================
       
 

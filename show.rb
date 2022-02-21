@@ -1,5 +1,5 @@
 module MenuFunctions
-
+  
   class Show
     require 'colorize'
     DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬".green.freeze
@@ -19,7 +19,13 @@ module MenuFunctions
     def self.get_author_name
       puts "Choose author by entering corresponding last name"
       user_input = gets.chomp.downcase
-      getting_files(user_input)
+      if AUTHORS.include?(user_input)
+        getting_files(user_input) 
+      else
+        puts "Wrong input! Please try again"
+        available_directories()
+        get_author_name()
+      end
     end
 
     def self.getting_files(user_input)
@@ -32,7 +38,12 @@ module MenuFunctions
     def self.getting_file_name(total, user_input)
       puts "Choose file to open by entering corresponding number"
       num_input = gets.chomp.to_i
-      opening_file(total, user_input, num_input)
+      if [*1..5].include?(num_input)
+        opening_file(total, user_input, num_input)
+      else
+        puts "Wrong input! Please try again"
+        getting_files(user_input)
+      end
     end
 
     def self.opening_file(total, user_input, num_input)
@@ -42,7 +53,14 @@ module MenuFunctions
 
     def self.show(file)
       puts DIVIDER
-      file.readlines.each {|x| puts x unless x.start_with?("#")}
+      file.readlines.each do |line|
+        if line.count("#") >= 2
+          point = line.rindex("#")
+          puts line.split("").take_while.with_index {|char, index| index != point}.join
+        else
+          puts line.split("").take_while {|char| char != "#"}.join
+        end
+      end
       puts DIVIDER
     end
   end
