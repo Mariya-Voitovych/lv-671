@@ -79,10 +79,4 @@ include Shared
       get_list("#{PATH_TASKS}/*") { |item| item.capitalize}   
     end
   end
-  # class AllTests
-  #   def self.call()
-      
-  #     
-  #   end
-  # end
 end
