@@ -30,7 +30,7 @@ PATH_JSON = './help_instructions/text.json'
 
     def dir_entr(url)
        Dir.entries(url).drop(2)
-        .select { |element| element.length > 5 } 
+        .select { |element| element.length > 3 } 
     end
 
     #shared method for showing files name in foulder (url) fot test and tasks
