@@ -87,10 +87,4 @@ include Shared
       puts "-----------------------------------------"
     end
   end
-  # class AllTests
-  #   def self.call()
-      
-  #     
-  #   end
-  # end
 end
