@@ -61,14 +61,18 @@ include Shared
       showin_files_names(PATH_TASKS)
       text_format('choose_author')
       author = gets.chomp.downcase
-      katas_list = Dir.entries("#{PATH_TASKS}/#{author}").drop(2)
-      .map.with_index{ |lastname, index| [(index + 1), lastname] }
+      katas_list = Dir.entries("#{PATH_TASKS}/#{author}").drop(2).map.with_index{ |lastname, index| [(index + 1), lastname] }
       katas_list.each{ |index, lastname| puts "#{index}: #{lastname}" }
-      author_kata = get_input_number("run_author_task")
-      system('ruby', "#{PATH_TASKS}/#{author}/#{katas_list.assoc(author_kata).at(1)}")
+      num_input = get_input_number("run_author_task")
+      system('ruby', "#{PATH_TASKS}/#{author}/#{katas_list.assoc(num_input).at(1)}")
       rescue Errno::ENOENT
         puts 'You entered invalid last name'.red
     end
+    # def self.show_user_katas(input, url)
+    #   katas_list = Dir.entries("#{url}/#{input}").drop(2)
+    #   katas_list.map!.with_index{ |lastname, index| [(index + 1), lastname] }
+    #   katas_list.each{ |index, lastname| puts "#{index}: #{lastname}" }
+    # end
   end
 
   class Test
