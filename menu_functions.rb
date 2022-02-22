@@ -1,5 +1,6 @@
 require_relative './show'
 require_relative './user_tests'
+require_relative './authors'
 
 $LOAD_PATH << '.'
 require 'shared.rb'
@@ -87,9 +88,9 @@ include Shared
   #   end
   # end
 
-  class Authors
-    def self.call
-      get_list("#{PATH_TASKS}/*") { |item| item.capitalize}   
-    end
-  end
-end
+  # class Authors
+  #   def self.call
+  #     
+  #   end
+  # end
+end  
