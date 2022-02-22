@@ -1,5 +1,3 @@
-puts "This program returns an array containing repetitions of the number argument.\n\n"
-
 def replicate(times, number)
   arr = []
   if times < 1
@@ -10,4 +8,7 @@ def replicate(times, number)
   end
 end
 
+if $PROGRAM_NAME == __FILE__
+  puts "This program returns an array containing repetitions of the number argument.\n\n"
 p replicate(5, 3)
+end

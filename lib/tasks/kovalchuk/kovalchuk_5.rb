@@ -1,5 +1,7 @@
+if $PROGRAM_NAME == __FILE__
 puts "This program return the first pair of two prime numbers
 spaced with a gap of gap_size between the limits start_range, end_range.\n\n"
+end
 
 require 'prime'
 def gap(gap_size, start_range, end_range)

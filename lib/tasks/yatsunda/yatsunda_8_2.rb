@@ -3,8 +3,6 @@
 # You can not use multiplier "*" operator.
 # If your name would be Jeong-Ho Aristotelis, ad would cost £600. 20 leters * 30 = 600 (Space counts as a letter).
 
-puts "This program find how much will cost your string "
-
 def billboard(name, price=30)
     s = 0
     p = price
@@ -15,4 +13,7 @@ def billboard(name, price=30)
     s
 end
 
+if $PROGRAM_NAME == __FILE__
+  puts "This program find how much will cost your string "
 p billboard('Roxa',6)
+end

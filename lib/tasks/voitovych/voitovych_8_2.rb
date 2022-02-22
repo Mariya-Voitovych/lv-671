@@ -1,5 +1,3 @@
-puts "This program takes in a Circle object and calculates the area of that circle."
-
 class Point
   attr_accessor :x, :y
 
@@ -22,4 +20,7 @@ def circle_area(circle)
   Math::PI * circle.radius**2
 end
 
+if $PROGRAM_NAME == __FILE__
+  puts "This program takes in a Circle object and calculates the area of that circle."
 puts "Circle.new(Point.new(10, 10), 30) => #{circle_area(Circle.new(Point.new(10, 10), 30))}"
+end
