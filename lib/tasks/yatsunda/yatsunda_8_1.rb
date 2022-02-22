@@ -4,4 +4,4 @@ def find_difference(a, b)
     (a.reduce(:*) - b.reduce(:*)).abs
 end
 
-p find_difference(3, 6)
+p find_difference([3, 2, 5], [1, 4, 4])
