@@ -1,6 +1,7 @@
 require_relative './show'
 require_relative './user_tests'
 require_relative './authors'
+require_relative './test'
 
 $LOAD_PATH << '.'
 require 'shared.rb'
@@ -74,12 +75,6 @@ include Shared
     #   katas_list.map!.with_index{ |lastname, index| [(index + 1), lastname] }
     #   katas_list.each{ |index, lastname| puts "#{index}: #{lastname}" }
     # end
-  end
-
-  class Test
-    def self.call(input)
-
-    end
   end
 
   # class Show
