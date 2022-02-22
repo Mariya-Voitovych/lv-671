@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def solve(m)
   a = m
   b = -(2 * m + 1)
@@ -7,4 +9,4 @@ def solve(m)
   (-b - Math.sqrt(discr)) / (2 * a)
 end
 
-solve(2.0) 
+p solve(2.0) 
