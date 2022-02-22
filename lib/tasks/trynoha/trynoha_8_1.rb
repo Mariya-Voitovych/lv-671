@@ -27,5 +27,3 @@ def factorial(num)
 end
 
 am_I_Wilson(5)
-am_I_Wilson(8)
-am_I_Wilson(19)

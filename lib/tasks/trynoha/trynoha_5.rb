@@ -15,6 +15,4 @@ def perimeter(num)
   sum
 end
 
-perimeter(3)
 perimeter(5)
-perimeter(123_123)

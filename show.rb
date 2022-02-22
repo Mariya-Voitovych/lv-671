@@ -38,7 +38,7 @@ module MenuFunctions
     def self.getting_file_name(total, user_input)
       puts "Choose file to open by entering corresponding number"
       num_input = gets.chomp.to_i
-      if [*1..5].include?(num_input)
+      if [*1..total.size].include?(num_input)
         opening_file(total, user_input, num_input)
       else
         puts "Wrong input! Please try again"
@@ -54,11 +54,13 @@ module MenuFunctions
     def self.show(file)
       puts DIVIDER
       file.readlines.each do |line|
-        if line.count("#") >= 2
-          point = line.rindex("#")
-          puts line.split("").take_while.with_index {|char, index| index != point}.join
+        split = line.split("")
+        if split.none? {|el| el == "\""}
+          puts split.take_while {|char| char != "#"}.join
+        elsif split.include?("#") && split[split.rindex("#") + 1] != "{"
+          puts split.take_while.with_index {|x, i| i != split.rindex("#")}.join
         else
-          puts line.split("").take_while {|char| char != "#"}.join
+          puts line
         end
       end
       puts DIVIDER

@@ -57,9 +57,22 @@ include Shared
   end
 
   class Run
-    def self.call(input)
-      
+    def self.call()
+      showin_files_names(PATH_TASKS)
+      text_format('choose_author')
+      author = gets.chomp.downcase
+      katas_list = Dir.entries("#{PATH_TASKS}/#{author}").sort.drop(2).map.with_index{ |lastname, index| [(index + 1), lastname] }
+      katas_list.each{ |index, lastname| puts "#{index}: #{lastname}" }
+      num_input = get_input_number("run_author_task")
+      system('ruby', "#{PATH_TASKS}/#{author}/#{katas_list.assoc(num_input).at(1)}")
+      rescue Errno::ENOENT
+        puts 'You entered invalid last name'.red
     end
+    # def self.show_user_katas(input, url)
+    #   katas_list = Dir.entries("#{url}/#{input}").drop(2)
+    #   katas_list.map!.with_index{ |lastname, index| [(index + 1), lastname] }
+    #   katas_list.each{ |index, lastname| puts "#{index}: #{lastname}" }
+    # end
   end
 
   class Test
@@ -75,16 +88,8 @@ include Shared
   # end
 
   class Authors
-    def self.call(input)
-      surnames = []
-      puts "-----------------------------------------"
-      Dir.foreach("#{Dir.pwd}/lib/tasks") do |i|
-        if i.length > 2
-          surnames << i.capitalize
-        end  
-      end
-      surnames.sort.each { |item|  puts item }
-      puts "-----------------------------------------"
+    def self.call
+      get_list("#{PATH_TASKS}/*") { |item| item.capitalize}   
     end
   end
 end

@@ -9,5 +9,3 @@ def two_decimal_places(num)
 end
 
 two_decimal_places(23.2323)
-two_decimal_places(-2.096321)
-two_decimal_places(5.44445)
