@@ -13,5 +13,3 @@ def new_avg(arr, newavg)
 end
 
 new_avg([14, 30, 5, 7, 9, 11, 16], 90)
-new_avg([1, 2, 3], 10)
-new_avg([100, 100, 100], 200)
