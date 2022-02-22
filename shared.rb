@@ -10,6 +10,7 @@ PATH_JSON = './help_instructions/text.json'
 AUTHORS = ["klym", "kovalchuk", "losiev", "pentsko", "savka", "trynoha",
 "voitovych", "yatsunda", "zastavskyi"]
 #============== SHOW METHODS ==============================
+DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬".green.freeze
       
 
     #=================TEXT ======================
@@ -30,8 +31,7 @@ AUTHORS = ["klym", "kovalchuk", "losiev", "pentsko", "savka", "trynoha",
 
 
     def dir_entr(url)
-       Dir.entries(url).drop(2)
-        .select { |element| element.length > 3 } 
+       Dir.entries(url).sort.drop(2)
     end
 
     #shared method for showing files name in foulder (url) fot test and tasks
@@ -63,6 +63,19 @@ AUTHORS = ["klym", "kovalchuk", "losiev", "pentsko", "savka", "trynoha",
         text_format(text)
         #catch user input
         gets.chomp.to_i
+    end
+
+    # return list of files in path
+    def get_list(path)
+      puts "-----------------------------------------"
+      Dir.glob(path).each do |item|
+        if block_given?
+          puts yield item.split('/').last
+        else
+          puts item.split('/').last
+        end
+      end
+      puts "-----------------------------------------"
     end
 #============== opening ==============================
     def opening_file(url)
