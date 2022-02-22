@@ -65,18 +65,7 @@ DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
         gets.chomp.to_i
     end
 
-    # return list of files in path
-    # def get_list(path)
-    #   puts DIVIDER
-    #   Dir.glob(path).each do |item|
-    #     if block_given?
-    #       puts yield item.split('/').last
-    #     else
-    #       puts item.split('/').last
-    #     end
-    #   end
-    #   puts DIVIDER
-    # end
+   #get list of path
     def get_list(path)
         Dir.glob(path).each do |dir_name| 
             dir_name

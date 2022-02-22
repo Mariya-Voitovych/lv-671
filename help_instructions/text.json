@@ -3,8 +3,5 @@
   "run_author_tests": "For running tests",
   "run_author_task": "Choose the number corresponding to the task",
   "run": "run",
-  "show": "show",
-  "author_redirect": "Author doesn't not exist.\nYou are redirected to the main menu",
-  "author_retry": "author doesn't not exist\nPlease enter the author from the list above",
-  "to_exit": "Enter 0 to return to the main menu"
+  "show": "show"
 }
