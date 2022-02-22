@@ -10,7 +10,7 @@ include Shared
 
   class Help
     class << self
-      def call(input)
+      def call
         begin
           show_instructions
           find_command
@@ -31,7 +31,7 @@ include Shared
         user_input = gets.chomp.downcase
         if !user_input.empty?
           File.readlines("./help_instructions/#{user_input}.txt").each do |line|
-            puts line
+            puts line.green
           end
         end
       end
