@@ -11,6 +11,7 @@ module MenuFunctions
 
     private
 
+
     def self.available_directories
       available_dirs = Dir.entries('./lib/tasks/').delete_if {|dir| [".", ".."].include?(dir)}
       available_dirs.each {|dir_name| puts dir_name.green}
@@ -38,7 +39,7 @@ module MenuFunctions
     def self.getting_file_name(total, user_input)
       puts "Choose file to open by entering corresponding number"
       num_input = gets.chomp.to_i
-      if [*1..5].include?(num_input)
+      if [*1..total.size].include?(num_input)
         opening_file(total, user_input, num_input)
       else
         puts "Wrong input! Please try again"
