@@ -11,7 +11,6 @@ module MenuFunctions
 
     private
 
-
     def self.available_directories
       available_dirs = Dir.entries('./lib/tasks/').delete_if {|dir| [".", ".."].include?(dir)}
       available_dirs.each {|dir_name| puts dir_name.green}
