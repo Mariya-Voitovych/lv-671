@@ -3,5 +3,8 @@
   "run_author_tests": "For running tests",
   "run_author_task": "Choose the number corresponding to the task",
   "run": "run",
-  "show": "show"
+  "show": "show",
+
+  "invalidNum": "Invalid number of test file!",
+  "invalidAut": "Unknown author name!"
 }

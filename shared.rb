@@ -24,7 +24,13 @@ DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
     #greem text, from text.json object, method gets text key
     def text_format(key)
+        puts DIVIDER
         puts (TEXT[key]).green
+        puts DIVIDER
+    end
+
+    def warn(message)
+        puts message.red
     end
     # ================================================
 
@@ -71,8 +77,19 @@ DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
             dir_name
         end
     end
-#============== opening ==============================
+#============== Opening ==============================
     def opening_file(url)
         File.open(url)
     end
+# ====================================================
+# ======================== Validation  ===============  
+    def valid_folder?(folder)
+       AUTHORS.include?(folder)
+    end
+
+    def valid_number?(number, folder)
+        max = dir_entr(folder).length
+        (1..max).include?(number)
+    end
+# ====================================================
 end

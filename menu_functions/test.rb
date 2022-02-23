@@ -3,14 +3,6 @@
 module MenuFunctions
   class Test
     class << self
-      def valid_folder?(folder)
-        AUTHORS.include?(folder)
-      end
-
-      def valid_number?(number)
-        (1..5).include?(number)
-      end
-
       def call
         puts Shared::DIVIDER
         showin_files_names(PATH_TESTS)
@@ -18,15 +10,16 @@ module MenuFunctions
         if valid_folder?(folder)
           show_owner_files(folder)
           test_number = get_input_number('run_author_task')
-          if valid_number?(test_number)
+
+          if valid_number?(test_number, "#{PATH_TESTS}/#{folder}")
             puts Shared::DIVIDER
             path = get_path(folder, test_number)
             run(path)
           else
-            warn('Invalid number of test file!')
+            warn(TEXT["invalidNum"])
           end
         else
-          warn('Unknown author name!')
+          warn(TEXT["invalidAut"])
         end
         puts Shared::DIVIDER
       end
@@ -40,9 +33,7 @@ module MenuFunctions
         tests.each_with_index { |file, index| puts "#{index + 1}. #{file}" }
       end
 
-      def warn(message)
-        puts message.red
-      end
+      
 
       def get_path(folder, test_number)
         tests = get_files(folder)

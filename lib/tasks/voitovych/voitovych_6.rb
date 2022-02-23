@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-puts"A ﬂoating-point number can be represented as mantissa * radix ^ exponent.
-This program returns argument in the form of a string concatenation of mantissa, P and exponent."
-
-=======
->>>>>>> master
 def mant_exp(a_number, digits_number)
   i = 0
   a_number = a_number.to_f
