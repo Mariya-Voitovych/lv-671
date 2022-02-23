@@ -34,4 +34,4 @@ After every spending it add remnant data to end of string.\n\n"
 128 Book :14.32
 129 Gasoline ::16.10
 ")
-  end
+end
