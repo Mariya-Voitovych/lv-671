@@ -31,8 +31,8 @@ DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
         puts DIVIDER
     end
 
-    def warn(message)
-        puts message.red
+    def warn(key)
+        puts (TEXT[key]).red
     end
     # ================================================
 

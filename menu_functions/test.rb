@@ -16,10 +16,10 @@ module MenuFunctions
             path = get_path(folder, test_number)
             run(path)
           else
-            warn(TEXT["invalidNum"])
+            warn("invalidNum")
           end
         else
-          warn(TEXT["invalidAut"])
+          warn("invalidAut")
         end
         puts Shared::DIVIDER
       end

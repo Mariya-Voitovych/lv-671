@@ -8,7 +8,7 @@ module MenuFunctions
           list = dir_entr("#{PATH_TESTS}/#{autor}").map{ |name| "#{PATH_TESTS}/#{autor}/#{name}"}
           system('rspec', *list)
         else
-          warn(TEXT["invalidAut"])
+          warn("invalidAut")
         end 
     end
   end
