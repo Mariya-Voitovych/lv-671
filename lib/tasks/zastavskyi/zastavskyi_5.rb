@@ -18,8 +18,11 @@ def find(seq)
   seq[i] + d
 end
 
-sequences = [
-[1, 3, 5, 9],
-[120, 240, 480]
-]
+if $PROGRAM_NAME == __FILE__
+  sequences = [
+                [1, 3, 5, 9],
+                [120, 240, 480]
+              ]
 sequences.each { |sequence| puts "Sequence: #{sequence}\nMissing element: #{find(sequence)}" }
+end
+

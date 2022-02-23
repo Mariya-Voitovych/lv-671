@@ -1,6 +1,3 @@
-puts "This program calculates perimeter of all the squares in a rectangle.
-Square lengths correspond to the Fibonacci number: 1 - 1; 2 - 1; 3 - 2; 4 - 3; 5 - 5; 6 - 8;..."
-
 def perimeter(num)
   a, b, sum = 0, 1, 4
 
@@ -15,4 +12,10 @@ def perimeter(num)
   sum
 end
 
-perimeter(5)
+if $PROGRAM_NAME == __FILE__
+  puts "This program calculates perimeter of all the squares in a rectangle.
+Square lengths correspond to the Fibonacci number: 1 - 1; 2 - 1; 3 - 2; 4 - 3; 5 - 5; 6 - 8;..."
+  perimeter(3)
+  perimeter(5)
+  perimeter(123)
+end

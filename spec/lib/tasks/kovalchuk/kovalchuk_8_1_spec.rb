@@ -1,23 +1,15 @@
-RSpec.describe 'def count_positives_sum_negatives' do
-  subject { count_positives_sum_negatives(test_arr) }
-  context 'when arg is empty' do
-    let(:test_arr) { [] }
-    it 'returns an empty array' do
-      expect(subject).to eq([])
+RSpec.describe 'def string_to_number' do
+  subject { string_to_number(str) }
+  context 'when an argument starts with a number' do
+    let(:str) { '12adf' }
+    it 'converts string to a number' do
+      expect(subject).to eq(12)
     end
   end
-
-  context 'when arg is nil' do
-    let(:test_arr) { nil }
-    it 'returns an empty array' do
-      expect(subject).to eq([])
-    end
-  end
-
-  context 'when arg of integers' do
-    let(:test_arr) { [1, 2, 5, 10, -1, -5, -7] }
-    it 'counts positive and calculates sum of negatives' do
-      expect(subject).to eq([4, -13])
+  context 'when an argument does not start with a number or an arg is nil' do
+    let(:str) { 'adf' }
+    it 'converts string to a number' do
+      expect(subject).to eq(0)
     end
   end
 end
