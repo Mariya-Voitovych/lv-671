@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'shared'
-
 module MenuFunctions
+  require_relative '../shared'
   include Shared
 
   class Test

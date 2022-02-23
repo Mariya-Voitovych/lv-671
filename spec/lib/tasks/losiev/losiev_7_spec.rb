@@ -1,8 +1,19 @@
-RSpec.describe "check_exam" do
-  it "should calculate exam points" do
-    expect(check_exam(["a", "a", "b", "b"], ["a", "c", "b", "d"])).to eq 6
-    expect(check_exam(["b", "c", "b", "a"], ["",  "a", "a", "c"])).to eq 0
-    expect(check_exam(["a", "a", "b", "b"], ["a", "", "", ""])).to eq 4 
-    expect(check_exam(["a", "a", "b", "b", "c"], ["a", "a", "c", "c", "c"])).to eq 10
+RSpec.describe 'check_exam' do
+  subject { check_exam(arr1, arr2) }
+
+  context 'when result is positive' do
+    let(:arr1) { %w[a a b b] }
+    let(:arr2) { %w[a a a c] }
+    it 'returns result' do
+      expect(subject).to eq 6
+    end
+  end
+
+  context 'when result is negative' do
+    let(:arr1) { %w[a a b b] }
+    let(:arr2) { %w[c c c c] }
+    it 'returns 0' do
+      expect(subject).to eq 0
+    end
   end
 end

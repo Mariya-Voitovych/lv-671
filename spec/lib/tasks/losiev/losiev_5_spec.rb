@@ -1,12 +1,17 @@
-RSpec.describe "zeros" do
-  it "returns number of trailing zeros of N!" do
+RSpec.describe 'zeros' do
+  subject { zeros(num) }
 
-      expect(zeros(2)).to eq 0
-      expect(zeros(100)).to eq 24
-      expect(zeros(10)).to eq 2
-      expect(zeros(25)).to eq 6
-      expect(zeros(15)).to eq 3
+  context 'when positive number is given' do
+    let(:num) { 24 }
+    it 'returns number of trailing zeros if num!' do
+      expect(subject).to eq 4
+    end
+  end
 
+  context 'when not positive number is given' do
+    let(:num) { -3 }
+    it 'returns 0' do
+      expect(subject).to eq 0
+    end
   end
 end
-

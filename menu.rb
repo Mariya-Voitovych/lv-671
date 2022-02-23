@@ -14,7 +14,7 @@ COMMANDS = {
 }.freeze
 
 puts "This console menu-program allows you to run tasks, tests and get additional information.
-There are 7 commands available: #{COMMANDS.keys.join(', ')}.
+There are 8 commands available: #{COMMANDS.keys.join(', ')}.
 For more info run command: help.\n\n"
 
 loop do

@@ -1,4 +1,6 @@
 module MenuFunctions
+  require_relative '../shared'
+  include Shared
   
   class Show
     require 'colorize'

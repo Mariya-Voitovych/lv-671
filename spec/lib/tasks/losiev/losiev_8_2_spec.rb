@@ -1,7 +1,9 @@
-RSpec.describe "converter" do
-  it "should convert miles per imperial gallon into kilometers per liter correctly" do
-    expect(converter(12)).to eq 4.25
-    expect(converter(0)).to eq 0
-    expect(converter(18)).to eq 6.37
+RSpec.describe 'converter' do
+  subject { converter(mpg) }
+  context 'when paramater is passed' do
+    let(:mpg) { 10 }
+    it 'returns converted value' do
+      expect(subject).to eq 3.54
+    end
   end
 end
