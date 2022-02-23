@@ -1,1 +1,0 @@
-run - shows all authors with their tasks and launches the chosen file. 

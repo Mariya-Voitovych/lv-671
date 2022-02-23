@@ -1,0 +1,10 @@
+{
+"all_commands": "Enter the commands name you want to look up:\n authors\n tasks \n test\n tests\n run\n show\n Or enter a blank line to exit.",
+"authors": "shows all authors",
+"run": "shows all authors with their tasks and launches the chosen file",
+"show": "shows all authors with their tasks and shows all the code contained in the selected file",
+"tasks": "displays all tasks",
+"test": "shows all authors with their tasks and runs the test in the selected file",
+"tests": "displays all tests",
+"user_tests": "shows all authors with their tests and launches the selected file"
+}  

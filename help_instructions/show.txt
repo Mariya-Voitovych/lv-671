@@ -1,1 +1,0 @@
-show - shows all authors with their tasks and shows all the code contained in the chosen file. 
