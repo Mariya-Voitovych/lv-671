@@ -1,5 +1,4 @@
 require_relative 'menu_functions'
-
 include MenuFunctions
 
 COMMANDS = {
@@ -14,7 +13,7 @@ COMMANDS = {
 }.freeze
 
 puts "This console menu-program allows you to run tasks, tests and get additional information.
-There are 7 commands available: #{COMMANDS.keys.join(', ')}.
+There are 8 commands available: #{COMMANDS.keys.join(', ')}.
 For more info run command: help.\n\n"
 
 loop do
@@ -32,7 +31,7 @@ loop do
   end
 
   if COMMANDS[input[0].to_sym]
-    COMMANDS[input[0].to_sym].call #(input)
+    COMMANDS[input[0].to_sym].call
   else
     puts "You entered invalid command. Enter 'help' to view available commands!"
   end

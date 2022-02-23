@@ -1,7 +1,7 @@
 require 'json'
 
 module Shared 
-    
+require 'colorize'
 #=============== PATH ====================================
 PATH_TASKS = './lib/tasks'
 PATH_TESTS = './spec/lib/tasks'

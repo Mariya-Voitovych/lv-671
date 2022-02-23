@@ -23,10 +23,10 @@ def factorial(num)
 end
 
 if $PROGRAM_NAME == __FILE__
-  puts "This program checks if the passed number is Wilson prime.
+  puts 'This program checks if the passed number is Wilson prime.
 Wilson prime means that the number should be prime and \
-result of expression ((n-1)! + 1) / (n * n)) should be whole number.\n\n"
-am_I_Wilson(5)
-am_I_Wilson(8)
-am_I_Wilson(19)
+result of expression ((n-1)! + 1) / (n * n)) should be whole number.'
+  am_I_Wilson(5)
+  am_I_Wilson(8)
+  am_I_Wilson(19)
 end

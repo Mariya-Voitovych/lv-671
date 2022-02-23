@@ -15,7 +15,7 @@ end
 if $PROGRAM_NAME == __FILE__
   puts "This program calculates perimeter of all the squares in a rectangle.
 Square lengths correspond to the Fibonacci number: 1 - 1; 2 - 1; 3 - 2; 4 - 3; 5 - 5; 6 - 8;..."
-perimeter(3)
-perimeter(5)
-perimeter(123_123)
+  perimeter(3)
+  perimeter(5)
+  perimeter(123)
 end

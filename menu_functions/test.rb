@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'shared'
-
 module MenuFunctions
-  include Shared
-
   class Test
     class << self
       def valid_folder?(folder)
