@@ -1,6 +1,3 @@
-puts "This program calculates total amount of books for each category included in category list.
-Category is the first letter of book code.\n\n"
-
 def stockList(list_of_art, list_of_cat)
   return '' if list_of_art.empty? || list_of_cat.empty?
 
@@ -18,7 +15,12 @@ def stockList(list_of_art, list_of_cat)
   res
 end
 
+if $PROGRAM_NAME == __FILE__
+  puts "This program calculates total amount of books for each category included in category list.
+Category is the first letter of book code.\n\n"
+
 b = ['ABAR 200', 'CDXE 500', 'BKWR 250', 'BTSQ 890', 'DRTY 600']
 c = %w[A B]
 
 stockList(b, c)
+end

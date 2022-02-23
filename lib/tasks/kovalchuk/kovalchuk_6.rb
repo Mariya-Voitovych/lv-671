@@ -1,4 +1,6 @@
+if $PROGRAM_NAME == __FILE__
 puts "This program calculate the average and variance of rainfall for the city.\n\n"
+end
 
 def value_of_month(town, strng)
   month_values = []

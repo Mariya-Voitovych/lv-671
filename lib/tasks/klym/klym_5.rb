@@ -1,4 +1,3 @@
-puts "This program working with collection of items depending on passed parameter (items_per_page)\nThis class has next methods:\n1)#item_count => returns total amount of items within all collection\n2)#page_count => returns amount of pages\n3)#page_item_count(page_index) => returns how many items specific page has (page_index specifies which page exactly)\n4)#page_index(item_index) => returns page index, where specific item is located (item_index specifies which item exactly)\nBoth #page_item_count and #page_index return -1 for non-existing indexes passed in"
 class PaginationHelper
 
   def initialize(collection, items_per_page)
@@ -26,6 +25,8 @@ class PaginationHelper
   end
 end
 
+if $PROGRAM_NAME == __FILE__
+  puts "This program working with collection of items depending on passed parameter (items_per_page)\nThis class has next methods:\n1)#item_count => returns total amount of items within all collection\n2)#page_count => returns amount of pages\n3)#page_item_count(page_index) => returns how many items specific page has (page_index specifies which page exactly)\n4)#page_index(item_index) => returns page index, where specific item is located (item_index specifies which item exactly)\nBoth #page_item_count and #page_index return -1 for non-existing indexes passed in"
 helper = PaginationHelper.new(['a','b','c','d','e','f'], 4)
 
 puts "item_count =>#{helper.item_count} items"
@@ -33,4 +34,4 @@ puts "page_count =>#{helper.page_count} pages"
 puts "page_item_count(1) =>#{helper.page_item_count(1)} items on page with index 1"
 puts "page_index(5) =>#{helper.page_index(5)} page has item with index 5"
 puts "page_index(-3)#non-existing argument =>#{helper.page_index(-3)}"
-
+end
