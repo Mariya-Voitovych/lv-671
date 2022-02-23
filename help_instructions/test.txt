@@ -1,1 +1,1 @@
-test testfile_name - runs the test testfile_name
+test - shows all authors with their tasks and runs the test in the chosen file. 

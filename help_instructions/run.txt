@@ -1,1 +1,1 @@
-run file_name - launches the task contained in the file file_name
+run - shows all authors with their tasks and launches the chosen file. 

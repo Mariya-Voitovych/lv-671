@@ -1,1 +1,1 @@
-show file_name - shows all the code contained in the file file_name
+show - shows all authors with their tasks and shows all the code contained in the chosen file. 

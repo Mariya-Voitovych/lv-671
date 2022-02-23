@@ -3,7 +3,9 @@ module MenuFunctions
     class << self
       def call
         begin
+          puts Shared::DIVIDER
           show_instructions
+          puts Shared::DIVIDER
           find_command
         rescue
           puts "Please check the commands name."
