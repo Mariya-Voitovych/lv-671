@@ -6,6 +6,7 @@ require 'colorize'
 PATH_TASKS = './lib/tasks'
 PATH_TESTS = './spec/lib/tasks'
 PATH_JSON = './help_instructions/text.json'
+PATH_HELP = './help_instructions/help.json'
 #=========================================================
 AUTHORS = ["klym", "kovalchuk", "losiev", "pentsko", "savka", "trynoha",
 "voitovych", "yatsunda", "zastavskyi"]
@@ -15,12 +16,13 @@ DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
     #=================TEXT ======================
     #shared method for geting static text from json file
-    def self.show_text
-        file = File.read(PATH_JSON)
+    def self.show_text(path)
+        file = File.read(path)
         JSON.parse(file)
     end
     #object from text.json
-    TEXT = Shared.show_text
+    TEXT = Shared.show_text(PATH_JSON)
+    HELP = Shared.show_text(PATH_HELP)
 
     #greem text, from text.json object, method gets text key
     def text_format(key)

@@ -3,7 +3,9 @@ module MenuFunctions
     class << self
       def call
         begin
-          show_instructions
+          puts Shared::DIVIDER
+          puts (HELP['all_commands'])
+          puts Shared::DIVIDER
           find_command
         rescue
           puts "Please check the commands name."
@@ -12,18 +14,10 @@ module MenuFunctions
 
       private
 
-      def show_instructions
-        File.readlines("./help_instructions/all_commands.txt").each do |line|
-          puts line
-        end
-      end
-
       def find_command
         user_input = gets.chomp.downcase
         if !user_input.empty?
-          File.readlines("./help_instructions/#{user_input}.txt").each do |line|
-            puts line.green
-          end
+          puts (HELP[user_input]).green
         end
       end
     end
