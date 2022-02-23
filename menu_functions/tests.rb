@@ -1,11 +1,16 @@
 module MenuFunctions
   class Tests
     def self.call
-      puts "-----------------------------------------"
-      Dir.glob("#{Dir.pwd}/spec/lib/tasks/**/*.rb") do |i|
-        puts i.split('/').last.split('.').first
-      end
-      puts "-----------------------------------------"
+      show_tests
+    end
+
+    def self.show_tests
+      puts DIVIDER
+      get_list("#{PATH_TESTS}/**/*.rb").each_with_index do |item, num|
+        string = "#{num + 1}. #{item.split('/').last.split('.').first}"
+        puts string
+      end      
+      puts DIVIDER
     end
   end
 end
