@@ -11,8 +11,8 @@ end
 
 if $PROGRAM_NAME == __FILE__
   puts "This program calculates the expected donation (rounded up to the next integer) \
-that will permit to reach the new average.\n\n"
-new_avg([14, 30, 5, 7, 9, 11, 16], 90)
-new_avg([1, 2, 3], 10)
-new_avg([100, 100, 100], 200)
+that will permit to reach the new average."
+  new_avg([14, 30, 5, 7, 9, 11, 16], 90)
+  new_avg([1, 2, 3], 10)
+  new_avg([100, 100, 100], 200)
 end

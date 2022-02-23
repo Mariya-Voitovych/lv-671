@@ -1,6 +1,4 @@
 module MenuFunctions
-  require_relative '../shared'
-  include Shared
 
   class Authors
     def self.call

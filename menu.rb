@@ -1,5 +1,4 @@
 require_relative 'menu_functions'
-
 include MenuFunctions
 
 COMMANDS = {
@@ -32,7 +31,7 @@ loop do
   end
 
   if COMMANDS[input[0].to_sym]
-    COMMANDS[input[0].to_sym].call #(input)
+    COMMANDS[input[0].to_sym].call
   else
     puts "You entered invalid command. Enter 'help' to view available commands!"
   end

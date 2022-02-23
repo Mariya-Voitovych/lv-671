@@ -1,7 +1,4 @@
-module MenuFunctions
-  require_relative '../shared'
-  include Shared
-  
+module MenuFunctions  
   class Show
     require 'colorize'
     DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬".green.freeze

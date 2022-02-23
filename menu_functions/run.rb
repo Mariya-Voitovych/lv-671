@@ -1,7 +1,4 @@
 module MenuFunctions
-  require_relative '../shared'
-  include Shared
-
   class Run
     def self.call()
       showin_files_names(PATH_TASKS)

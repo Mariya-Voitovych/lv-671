@@ -7,8 +7,8 @@ def two_decimal_places(num)
 end
 
 if $PROGRAM_NAME == __FILE__
-  puts "This program rounds float number to 2 decimal places.\n\n"
-two_decimal_places(23.2323)
-two_decimal_places(-2.096321)
-two_decimal_places(5.44445)
+  puts 'This program rounds float number to 2 decimal places.'
+  two_decimal_places(23.2323)
+  two_decimal_places(-2.096321)
+  two_decimal_places(5.44445)
 end

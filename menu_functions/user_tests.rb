@@ -1,6 +1,4 @@
 module MenuFunctions
-  require_relative '../shared'
-  include Shared
   class UserTests
     def self.call()
       text_format('choose_author')

@@ -1,7 +1,4 @@
 module MenuFunctions
-  require_relative '../shared'
-  include Shared
-
   class Help
     class << self
       def call

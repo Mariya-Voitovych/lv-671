@@ -1,7 +1,4 @@
 module MenuFunctions
-  require_relative '../shared'
-  include Shared
-
   class Tasks
     def self.call
       tasks_list = Dir.glob("./lib/tasks/**/*.rb").drop(2)

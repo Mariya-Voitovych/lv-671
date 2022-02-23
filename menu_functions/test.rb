@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 module MenuFunctions
-  require_relative '../shared'
-  include Shared
-
   class Test
     class << self
       def valid_folder?(folder)
