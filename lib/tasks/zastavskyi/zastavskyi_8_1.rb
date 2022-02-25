@@ -19,7 +19,3 @@ def remove_exclamation_marks(input_string)
   string                   # return result string
 end
 
-if $PROGRAM_NAME == __FILE__
-strings = ['hello!', 'world!!', '!for!', 'every!one!!']
-strings.each { |string| puts "String: #{string}\nChanged string: #{remove_exclamation_marks(string)}" }
-end
