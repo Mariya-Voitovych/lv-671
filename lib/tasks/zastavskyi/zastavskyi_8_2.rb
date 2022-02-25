@@ -16,7 +16,3 @@ def dna_to_rna(dna)
   dna.upcase.gsub('T', 'U')
 end
 
-if $PROGRAM_NAME == __FILE__
-strings = ['TAGCTAGC', 'TAATTAGCCAT']
-strings.each { |string| puts "DNA: #{string}\nRNA: #{dna_to_rna(string)}" }
-end

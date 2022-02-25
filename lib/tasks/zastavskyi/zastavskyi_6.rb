@@ -15,9 +15,3 @@ def multiplication_table(size)
   res
 end
 
-if $PROGRAM_NAME == __FILE__
-n = 6
-puts "Multiplication table with size #{n}"
-table = multiplication_table(n)
-table.each { |row| p row }
-end
