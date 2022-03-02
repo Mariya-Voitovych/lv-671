@@ -1,8 +1,5 @@
 module MenuFunctions  
   class Show
-    require 'colorize'
-    DIVIDER = "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬".green.freeze
-
     def self.call
       available_directories
       get_author_name
@@ -11,8 +8,7 @@ module MenuFunctions
     private
 
     def self.available_directories
-      available_dirs = Dir.entries('./lib/tasks/').delete_if {|dir| [".", ".."].include?(dir)}
-      available_dirs.each {|dir_name| puts dir_name.green}
+      dir_entr(PATH_TASKS).each {|dir_name| puts dir_name.green}
     end
 
     def self.get_author_name
