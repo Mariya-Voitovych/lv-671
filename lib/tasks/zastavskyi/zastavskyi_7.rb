@@ -12,3 +12,12 @@ def stray(numbers)
   numbers
 end
 
+if $PROGRAM_NAME == __FILE__
+  sequences = [
+    [1, 1, 1, 3, 1],
+    [0, 0, 1, 0, 0]
+  ]
+  sequences.each do |sequence|
+    puts "Sequence: #{sequence}\nDifferent element: #{stray(sequence)}"
+  end
+end
