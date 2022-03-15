@@ -2,13 +2,13 @@ module MenuFunctions
   class Show
     def self.call
       available_directories
-      get_author_name
     end
 
     private
 
     def self.available_directories
       dir_entr(PATH_TASKS).each {|dir_name| puts dir_name.green}
+      get_author_name()
     end
 
     def self.get_author_name
@@ -19,7 +19,6 @@ module MenuFunctions
       else
         puts "Wrong input! Please try again"
         available_directories()
-        get_author_name()
       end
     end
 
