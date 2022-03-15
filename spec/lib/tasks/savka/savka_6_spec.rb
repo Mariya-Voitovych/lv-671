@@ -1,4 +1,4 @@
-require 'rspec'
+# frozen_string_literal: true
 
 describe 'find_nb' do
   context 'when pile from cubes not exists' do

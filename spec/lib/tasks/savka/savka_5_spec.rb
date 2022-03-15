@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'solve' do
   context 'when argument is close to zero' do
     it { expect((solve(0.02) - 0.01923788646683855).abs).to be < 1e-12 }

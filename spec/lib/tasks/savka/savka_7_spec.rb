@@ -1,4 +1,4 @@
-require 'rspec'
+# frozen_string_literal: true
 
 describe 'replicate' do
   context 'when given positive integer parametr' do

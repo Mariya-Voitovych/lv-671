@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Point
   attr_accessor :x, :y
 
@@ -21,6 +23,6 @@ def circle_area(circle)
 end
 
 if $PROGRAM_NAME == __FILE__
-  puts "This program takes in a Circle object and calculates the area of that circle."
-puts "Circle.new(Point.new(10, 10), 30) => #{circle_area(Circle.new(Point.new(10, 10), 30))}"
+  puts 'This program takes in a Circle object and calculates the area of that circle.'
+  puts "Circle.new(Point.new(10, 10), 30) => #{circle_area(Circle.new(Point.new(10, 10), 30))}"
 end

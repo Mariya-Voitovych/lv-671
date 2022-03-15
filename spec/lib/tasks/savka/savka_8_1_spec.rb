@@ -1,4 +1,4 @@
-require 'rspec'
+# frozen_string_literal: true
 
 describe 'square_or_square_root' do
   it 'get root and square' do

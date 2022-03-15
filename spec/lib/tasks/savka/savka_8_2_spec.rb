@@ -1,4 +1,4 @@
-require 'rspec'
+# frozen_string_literal: true
 
 describe 'fix_the_meerkat' do
   it 'switch first and last arrays elements' do
