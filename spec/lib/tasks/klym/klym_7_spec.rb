@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 RSpec.describe 'sequence_sum' do
   subject { sequence_sum(begin_number, end_number, step) }

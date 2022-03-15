@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 RSpec.describe 'starting_mark' do
   subject { starting_mark(height) }
