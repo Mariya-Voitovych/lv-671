@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe PaginationHelper do
   subject { described_class.new(collection, items_per_page) }
   let(:collection) { %w[a b c d e f g h i] }

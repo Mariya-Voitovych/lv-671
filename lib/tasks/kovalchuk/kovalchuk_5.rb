@@ -1,7 +1,4 @@
-if $PROGRAM_NAME == __FILE__
-puts "This program return the first pair of two prime numbers
-spaced with a gap of gap_size between the limits start_range, end_range.\n\n"
-end
+# frozen_string_literal: true
 
 require 'prime'
 def gap(gap_size, start_range, end_range)
@@ -21,4 +18,11 @@ def gap(gap_size, start_range, end_range)
     end
   end
   first != second ? result : nil
+end
+
+if $PROGRAM_NAME == __FILE__
+  puts "This program return the first pair of two prime numbers
+  spaced with a gap of gap_size between the limits start_range, end_range.\n\n"
+  puts gap(2, 100, 110).to_s
+  puts gap(8, 300, 400).to_s
 end
