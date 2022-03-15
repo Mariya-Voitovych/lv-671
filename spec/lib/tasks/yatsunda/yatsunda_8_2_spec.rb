@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe '#billboard(name, price=30)' do
   context 'given 0 as price'
   it 'returns 0' do

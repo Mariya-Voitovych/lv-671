@@ -16,10 +16,10 @@ module MenuFunctions
             path = get_path(folder, test_number)
             run(path)
           else
-            warn(TEXT["invalidNum"])
+            warn(TEXT['invalidNum'])
           end
         else
-          warn(TEXT["invalidAut"])
+          warn(TEXT['invalidAut'])
         end
         puts Shared::DIVIDER
       end
@@ -32,8 +32,6 @@ module MenuFunctions
         tests = get_files(folder)
         tests.each_with_index { |file, index| puts "#{index + 1}. #{file}" }
       end
-
-      
 
       def get_path(folder, test_number)
         tests = get_files(folder)
