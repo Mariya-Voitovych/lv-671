@@ -9,4 +9,6 @@ def solve(m)
   (-b - Math.sqrt(discr)) / (2 * a)
 end
 
+if $PROGRAM_NAME == __FILE__
 p solve(2.0) 
+end

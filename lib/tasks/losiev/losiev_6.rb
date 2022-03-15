@@ -1,6 +1,3 @@
-puts "This program returns the results of given name of a basketball team \
-using the string with games results."
-
 def number?(string)
   true if Float(string)
 rescue StandardError
@@ -83,4 +80,8 @@ end
 result_sheet = 'Los Angeles Clippers 104 Dallas Mavericks 88,New York Knicks 101 Atlanta Hawks 112,\
 Indiana Pacers 103 Memphis Grizzlies 112, Los Angeles Clippers 100 Boston Celtics 120'
 
+if $PROGRAM_NAME == __FILE__
+puts "This program returns the results of given name of a basketball team \
+using the string with games results."
 puts nba_cup(result_sheet, 'Los Angeles Clippers')
+end

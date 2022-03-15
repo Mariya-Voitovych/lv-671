@@ -1,5 +1,3 @@
-puts "This program calculates the result of test."
-
 def check_exam(arr1, arr2)
   result = 0
   arr1.each_with_index do |answer, index|
@@ -13,4 +11,7 @@ def check_exam(arr1, arr2)
   result >= 0 ? result : 0
 end
 
-puts check_exam(%w[a a b b], %w[a c b d])
+if $PROGRAM_NAME == __FILE__
+  puts "This program calculates the result of test."
+  puts check_exam(%w[a a b b], %w[a c b d])
+end

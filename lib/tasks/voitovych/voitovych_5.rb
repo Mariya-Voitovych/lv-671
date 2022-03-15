@@ -1,11 +1,3 @@
-puts "This program calculates weight for each number in a string of n positive 
-numbers (n = 0 or n >= 2) and then finds two numbers of strng that have:
-- the smallest difference of weights ie that are the closest
-- with the smallest weights
-- with the smallest indices (or ranks, numbered from 0) in strng
-Output is an array of two arrays, each subarray in the following format:
-[number-weight, index in strng of the corresponding number, original corresponding number in strng]"
-
 class Strng
   def initialize(strng)
     @numbers = strng.split
@@ -84,5 +76,14 @@ def closest(strng)
   Strng.new(strng).closest
 end  
 
+if $PROGRAM_NAME == __FILE__
+  puts "This program calculates weight for each number in a string of n positive 
+numbers (n = 0 or n >= 2) and then finds two numbers of strng that have:
+- the smallest difference of weights ie that are the closest
+- with the smallest weights
+- with the smallest indices (or ranks, numbered from 0) in strng
+Output is an array of two arrays, each subarray in the following format:
+[number-weight, index in strng of the corresponding number, original corresponding number in strng]"
 strng = "456899 50 11992 176 272293 163 389128 96 290193 85 52"
 puts "#{strng} => #{closest(strng)}"
+end

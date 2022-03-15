@@ -1,9 +1,3 @@
-puts "This method take number, find the one smallest number in it and take it out of initial number.
-This smallest number add to the beginning of initial number in such way,
- that number what appear in result number become the smallest of potentially possible.
-In result add new pottentialy smallest number, old index of smallest number in initial number
- and index of place where add smallest initial number\n\n"
-
 def smallest(n)
   elements = n.to_s.split(//)                                   #розділяє ціле число на окремі елементи
   array_bigger = elements.to_a                                  #перетворює елемент у масив значень
@@ -27,4 +21,12 @@ def smallest(n)
     result.map { |el| el.to_i }
 end
 
-smallest(261235)
+if $PROGRAM_NAME == __FILE__
+  puts "This method take number, find the one smallest number in it and take it out of initial number.
+This smallest number add to the beginning of initial number in such way,
+ that number what appear in result number become the smallest of potentially possible.
+In result add new pottentialy smallest number, old index of smallest number in initial number
+ and index of place where add smallest initial number\n\n"
+
+  smallest(261235)
+end
