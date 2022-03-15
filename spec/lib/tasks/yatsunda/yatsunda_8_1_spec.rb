@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe '#find_difference(a, b)' do
   context 'given identical arrays'
   it 'returns 0' do

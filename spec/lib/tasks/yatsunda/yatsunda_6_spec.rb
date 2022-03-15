@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe '#expanded_form(num)' do
   context 'given number without zero'
   it 'returns valid result' do

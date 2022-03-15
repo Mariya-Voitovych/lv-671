@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe '#get_middle(s)' do
   context 'given odd-length string (latin)'
   it 'returns single middle character' do

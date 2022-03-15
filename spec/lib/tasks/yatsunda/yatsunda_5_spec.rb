@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'increment_string(input)' do
   context 'given string containing only number'
   it 'returns incremented number' do
